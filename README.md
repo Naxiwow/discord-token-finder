@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d0d1a,50:4f46e5,100:22d3ee&height=220&section=header&text=TokenFinder&fontSize=70&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Find%20your%20Discord%20token%20in%20seconds&descAlignY=58&descSize=18&descColor=a5b4fc" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:09090d,50:7f1d1d,100:dc2626&height=200&section=header&text=TokenFinder&fontSize=64&fontColor=f5f5f5&animation=fadeIn&fontAlignY=38&desc=Find%20your%20Discord%20token%20in%20seconds&descAlignY=58&descSize=16&descColor=a3a3a3" width="100%"/>
 
 <br/>
 
-[![Release](https://img.shields.io/github/v/release/Naxiwow/discord-token-finder?style=for-the-badge&logo=github&logoColor=white&color=4f46e5&labelColor=0d0d1a)](https://github.com/Naxiwow/discord-token-finder/releases/latest)
-[![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white&labelColor=0d0d1a)](https://python.org)
-[![Platform](https://img.shields.io/badge/Windows-Only-0078D4?style=for-the-badge&logo=windows&logoColor=white&labelColor=0d0d1a)](https://github.com/Naxiwow/discord-token-finder)
-[![Stars](https://img.shields.io/github/stars/Naxiwow/discord-token-finder?style=for-the-badge&logo=star&logoColor=white&color=22d3ee&labelColor=0d0d1a)](https://github.com/Naxiwow/discord-token-finder/stargazers)
+[![Release](https://img.shields.io/github/v/release/Naxiwow/discord-token-finder?style=for-the-badge&logo=github&logoColor=white&color=dc2626&labelColor=09090d)](https://github.com/Naxiwow/discord-token-finder/releases/latest)
+[![Python](https://img.shields.io/badge/Python-3.10+-dc2626?style=for-the-badge&logo=python&logoColor=white&labelColor=09090d)](https://python.org)
+[![Platform](https://img.shields.io/badge/Windows-Only-dc2626?style=for-the-badge&logo=windows&logoColor=white&labelColor=09090d)](https://github.com/Naxiwow/discord-token-finder)
+[![Stars](https://img.shields.io/github/stars/Naxiwow/discord-token-finder?style=for-the-badge&color=dc2626&labelColor=09090d&logo=github&logoColor=white)](https://github.com/Naxiwow/discord-token-finder/stargazers)
 
 <br/>
 
@@ -17,22 +17,33 @@
 
 <div align="center">
 
-### ◈ &nbsp; Find your own Discord tokens &nbsp; · &nbsp; 100% local &nbsp; · &nbsp; No data sent &nbsp; ◈
+### Find your own Discord token — local only — nothing sent anywhere
 
 </div>
+
+---
+
+## Supported clients
+
+```
+Discord          ·  Discord Canary     ·  Discord PTB
+Vesktop          ·  Vencord            ·  Equicord
+Legcord          ·  ArmCord            ·  GoofCord  ·  WebCord
+Chrome           ·  Edge               ·  Brave
+Opera            ·  Opera GX
+```
 
 ---
 
 ## Features
 
 ```
-◉  Scans Discord, Discord Canary, Discord PTB
-◉  Scans Chrome, Edge, Brave, Opera, Opera GX
+◉  Scans all Discord clients and modded forks
 ◉  Validates tokens against the Discord API
 ◉  Shows username for each valid token
-◉  One-click copy to clipboard
-◉  Sleek GUI — no terminal needed
-◉  Fully offline — nothing leaves your machine
+◉  One-click copy — no CMD flash, no console
+◉  Clean dark UI — no terminal needed
+◉  100% local — nothing leaves your machine
 ```
 
 ---
@@ -41,9 +52,9 @@
 
 <div align="center">
 
-[![Download](https://img.shields.io/badge/⬇%20Download%20TokenFinder.exe-4f46e5?style=for-the-badge&logo=windows&logoColor=white)](https://github.com/Naxiwow/discord-token-finder/releases/latest)
+[![Download](https://img.shields.io/badge/⬇%20%20Download%20TokenFinder.exe-dc2626?style=for-the-badge&logo=windows&logoColor=white&labelColor=09090d)](https://github.com/Naxiwow/discord-token-finder/releases/latest)
 
-*No installation required — just run it.*
+*No installation required — run and scan.*
 
 </div>
 
@@ -60,30 +71,10 @@ python token_finder.py
 
 ---
 
-## Supported browsers & clients
-
-<div align="center">
-
-| App | Status |
-|:---|:---:|
-| Discord | ✅ |
-| Discord Canary | ✅ |
-| Discord PTB | ✅ |
-| Chrome | ✅ |
-| Microsoft Edge | ✅ |
-| Brave | ✅ |
-| Opera | ✅ |
-| Opera GX | ✅ |
-
-</div>
-
----
-
 ## Disclaimer
 
-> This tool is for **personal use only**.  
-> Only use it on your own machine to retrieve your own tokens.  
-> The author is not responsible for any misuse.
+> For **personal use only**.  
+> Only use on your own machine to retrieve your own tokens.
 
 ---
 
@@ -91,6 +82,6 @@ python token_finder.py
 
 Made by [Naxiwow](https://github.com/Naxiwow)
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,50:4f46e5,100:0d0d1a&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:dc2626,50:7f1d1d,100:09090d&height=120&section=footer" width="100%"/>
 
 </div>
