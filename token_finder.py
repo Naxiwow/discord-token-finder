@@ -108,12 +108,28 @@ SOURCES = [
     ("ArmCord",        f"{APPDATA}\\ArmCord\\Local State",                             f"{APPDATA}\\ArmCord\\Local Storage\\leveldb"),
     ("GoofCord",       f"{APPDATA}\\GoofCord\\Local State",                            f"{APPDATA}\\GoofCord\\Local Storage\\leveldb"),
     ("WebCord",        f"{APPDATA}\\WebCord\\Local State",                             f"{APPDATA}\\WebCord\\Local Storage\\leveldb"),
-    # ── Browsers
-    ("Chrome",         f"{LOCAL_APPDATA}\\Google\\Chrome\\User Data\\Local State",      f"{LOCAL_APPDATA}\\Google\\Chrome\\User Data\\Default\\Local Storage\\leveldb"),
-    ("Edge",           f"{LOCAL_APPDATA}\\Microsoft\\Edge\\User Data\\Local State",     f"{LOCAL_APPDATA}\\Microsoft\\Edge\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Dorion",         f"{APPDATA}\\dorion\\Local State",                              f"{APPDATA}\\dorion\\Local Storage\\leveldb"),
+    # ── Browsers — Google / Chromium
+    ("Chrome",         f"{LOCAL_APPDATA}\\Google\\Chrome\\User Data\\Local State",     f"{LOCAL_APPDATA}\\Google\\Chrome\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Chromium",       f"{LOCAL_APPDATA}\\Chromium\\User Data\\Local State",           f"{LOCAL_APPDATA}\\Chromium\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Thorium",        f"{LOCAL_APPDATA}\\Thorium\\User Data\\Local State",            f"{LOCAL_APPDATA}\\Thorium\\User Data\\Default\\Local Storage\\leveldb"),
+    # ── Browsers — Microsoft
+    ("Edge",           f"{LOCAL_APPDATA}\\Microsoft\\Edge\\User Data\\Local State",    f"{LOCAL_APPDATA}\\Microsoft\\Edge\\User Data\\Default\\Local Storage\\leveldb"),
+    # ── Browsers — Brave
     ("Brave",          f"{LOCAL_APPDATA}\\BraveSoftware\\Brave-Browser\\User Data\\Local State", f"{LOCAL_APPDATA}\\BraveSoftware\\Brave-Browser\\User Data\\Default\\Local Storage\\leveldb"),
-    ("Opera",          f"{APPDATA}\\Opera Software\\Opera Stable\\Local State",         f"{APPDATA}\\Opera Software\\Opera Stable\\Local Storage\\leveldb"),
-    ("Opera GX",       f"{APPDATA}\\Opera Software\\Opera GX Stable\\Local State",      f"{APPDATA}\\Opera Software\\Opera GX Stable\\Local Storage\\leveldb"),
+    # ── Browsers — Opera
+    ("Opera",          f"{APPDATA}\\Opera Software\\Opera Stable\\Local State",        f"{APPDATA}\\Opera Software\\Opera Stable\\Local Storage\\leveldb"),
+    ("Opera GX",       f"{APPDATA}\\Opera Software\\Opera GX Stable\\Local State",     f"{APPDATA}\\Opera Software\\Opera GX Stable\\Local Storage\\leveldb"),
+    # ── Browsers — Vivaldi / Arc
+    ("Vivaldi",        f"{LOCAL_APPDATA}\\Vivaldi\\User Data\\Local State",            f"{LOCAL_APPDATA}\\Vivaldi\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Arc",            f"{LOCAL_APPDATA}\\Arc\\User Data\\Local State",                f"{LOCAL_APPDATA}\\Arc\\User Data\\Default\\Local Storage\\leveldb"),
+    # ── Browsers — Comet (Perplexity)
+    ("Comet",          f"{LOCAL_APPDATA}\\Comet\\User Data\\Local State",              f"{LOCAL_APPDATA}\\Comet\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Comet",          f"{LOCAL_APPDATA}\\Perplexity\\Comet\\User Data\\Local State",  f"{LOCAL_APPDATA}\\Perplexity\\Comet\\User Data\\Default\\Local Storage\\leveldb"),
+    # ── Browsers — Yandex / Whale / Wavebox
+    ("Yandex",         f"{LOCAL_APPDATA}\\Yandex\\YandexBrowser\\User Data\\Local State", f"{LOCAL_APPDATA}\\Yandex\\YandexBrowser\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Whale",          f"{LOCAL_APPDATA}\\Naver\\Naver Whale\\User Data\\Local State", f"{LOCAL_APPDATA}\\Naver\\Naver Whale\\User Data\\Default\\Local Storage\\leveldb"),
+    ("Wavebox",        f"{LOCAL_APPDATA}\\Wavebox\\User Data\\Local State",            f"{LOCAL_APPDATA}\\Wavebox\\User Data\\Default\\Local Storage\\leveldb"),
 ]
 
 def find_all_tokens():
@@ -369,7 +385,7 @@ body::before {
 <div id="titlebar">
   <div class="titlebar-icon">TF</div>
   <span class="titlebar-name">TokenFinder</span>
-  <span class="titlebar-ver">&nbsp;v2.2</span>
+  <span class="titlebar-ver">&nbsp;v2.3</span>
   <div class="titlebar-controls">
     <button class="ctrl" onclick="pywebview.api.minimize()">─</button>
     <button class="ctrl x" onclick="pywebview.api.close()">✕</button>
@@ -380,7 +396,7 @@ body::before {
   <div class="hero">
     <div class="hero-eyebrow">Discord Token Finder</div>
     <div class="hero-title">Find your token</div>
-    <div class="hero-sub">Supports Discord · Vencord · Equicord · Vesktop · Legcord · browsers</div>
+    <div class="hero-sub">Discord · Vesktop · Legcord · Dorion · Chrome · Edge · Brave · Opera · Vivaldi · Arc · Comet · Yandex · +more</div>
   </div>
 
   <div class="scan-wrap">
@@ -403,19 +419,28 @@ const store = {};
 let toastTimer;
 
 const COLORS = {
-  Discord:        '#4ade80',
+  Discord:         '#4ade80',
   'Discord Canary':'#818cf8',
-  'Discord PTB':  '#c084fc',
-  Vesktop:        '#f472b6',
-  Legcord:        '#fb923c',
-  ArmCord:        '#facc15',
-  GoofCord:       '#38bdf8',
-  WebCord:        '#60a5fa',
-  Chrome:         '#f87171',
-  Edge:           '#22d3ee',
-  Brave:          '#fb923c',
-  Opera:          '#f87171',
-  'Opera GX':     '#c084fc',
+  'Discord PTB':   '#c084fc',
+  Vesktop:         '#f472b6',
+  Legcord:         '#fb923c',
+  ArmCord:         '#facc15',
+  GoofCord:        '#38bdf8',
+  WebCord:         '#60a5fa',
+  Dorion:          '#a78bfa',
+  Chrome:          '#f87171',
+  Chromium:        '#94a3b8',
+  Thorium:         '#fbbf24',
+  Edge:            '#22d3ee',
+  Brave:           '#fb923c',
+  Opera:           '#f87171',
+  'Opera GX':      '#c084fc',
+  Vivaldi:         '#ef4444',
+  Arc:             '#818cf8',
+  Comet:           '#38bdf8',
+  Yandex:          '#f87171',
+  Whale:           '#34d399',
+  Wavebox:         '#60a5fa',
 };
 
 function startScan() {
