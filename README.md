@@ -29,10 +29,13 @@
 
 | Discord | Discord Canary | Discord PTB |
 |:---:|:---:|:---:|
-| **Vesktop** | **Vencord** | **Equicord** |
-| **Legcord** | **ArmCord** | **GoofCord** |
-| **WebCord** | **Chrome** | **Edge** |
-| **Brave** | **Opera** | **Opera GX** |
+| **Vesktop** | **Legcord** | **ArmCord** |
+| **GoofCord** | **WebCord** | **Dorion** |
+| **Chrome** | **Chromium** | **Thorium** |
+| **Edge** | **Brave** | **Opera** |
+| **Opera GX** | **Vivaldi** | **Arc** |
+| **Comet** | **Yandex** | **Whale** |
+| **Wavebox** | | |
 
 </div>
 
