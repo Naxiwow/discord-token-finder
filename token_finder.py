@@ -7,6 +7,7 @@ import ctypes
 import ctypes.wintypes
 import ssl
 import urllib.request
+import subprocess
 
 # ── DPAPI decryption ──────────────────────────────────────────────────────────
 
@@ -125,20 +126,15 @@ def find_all_tokens():
                 results.append({"source": source_name, "token": token})
     return results
 
-# ── Clipboard — no subprocess, no CMD flash ───────────────────────────────────
+# ── Clipboard — CREATE_NO_WINDOW flag prevents any CMD flash ──────────────────
 
 def copy_to_clipboard(text):
-    CF_UNICODETEXT = 13
-    buf    = ctypes.create_unicode_buffer(text)
-    size   = ctypes.sizeof(buf)
-    handle = ctypes.windll.kernel32.GlobalAlloc(0x0002, size)
-    ptr    = ctypes.windll.kernel32.GlobalLock(handle)
-    ctypes.memmove(ptr, buf, size)
-    ctypes.windll.kernel32.GlobalUnlock(handle)
-    ctypes.windll.user32.OpenClipboard(0)
-    ctypes.windll.user32.EmptyClipboard()
-    ctypes.windll.user32.SetClipboardData(CF_UNICODETEXT, handle)
-    ctypes.windll.user32.CloseClipboard()
+    subprocess.run(
+        'clip',
+        input=text.encode('utf-16-le'),
+        creationflags=0x08000000,  # CREATE_NO_WINDOW
+        check=True
+    )
 
 # ── Python ↔ JS bridge ────────────────────────────────────────────────────────
 
