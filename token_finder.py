@@ -385,7 +385,7 @@ body::before {
 <div id="titlebar">
   <div class="titlebar-icon">TF</div>
   <span class="titlebar-name">TokenFinder</span>
-  <span class="titlebar-ver">&nbsp;v2.3</span>
+  <span class="titlebar-ver">&nbsp;v2.4</span>
   <div class="titlebar-controls">
     <button class="ctrl" onclick="pywebview.api.minimize()">─</button>
     <button class="ctrl x" onclick="pywebview.api.close()">✕</button>
